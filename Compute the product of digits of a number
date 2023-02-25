@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    int product=1;
+    cout<<"enter the number";
+    cin>>n;
+    while(n>0){
+        int num=n%10;
+        product=product*num;
+        n=n/10;
+    }
+    cout<<"the product of the digits:"<<product;
+    return 0;
+}
