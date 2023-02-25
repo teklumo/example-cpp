@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long  n,remander=0,revers_num=0;
+    cout<<"enter the number";
+    cin>>n;
+    if(n==0){
+        cout<<n;
+    }
+    while(n!=0){
+        remander=n%10;
+        revers_num=revers_num*10 + remander;
+        n=n/10;
+    }
+    cout<<"the revers of the number is: "<<revers_num;
+    return 0;
+}
