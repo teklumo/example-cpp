@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+   int n,first,last,a,b,nn,digit;
+   cout<<"enter the value:";
+   cin>>n;
+    digit=(int)log10(n);
+    first=n/(pow(10,digit));
+    last=n%10;
+    a=first*(pow(10,digit));
+    b=n%a;
+    n=b/10;
+    nn=last*(pow(10,digit)) +((n*10) +first);
+    cout<<"the swaped:"<<nn;
+    return 0;
