@@ -1,4 +1,8 @@
-# example-cpp
+/*Write an application that inputs a number from the user and separates the number into its 
+individual digits and prints the digits separated from one another by two spaces each. For 
+example, if the user types in the number 42339, the program should print 4 2 3 3 9.*/
+
+
 #include <iostream>
 using namespace std;
 #include<algorithm>
