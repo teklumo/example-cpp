@@ -1,0 +1,22 @@
+# example-cpp
+#include <iostream>
+using namespace std;
+#include<algorithm>
+#include<cmath>
+#include<string>
+ int main(){
+    int n ,number;
+    cout<<"enter five numbers";
+        cin>>n;
+        cout<<n/10000<<"  ";
+        number=n%10000;
+        cout<<number/1000<<"  ";
+        number=number%1000;
+        cout<<number/100<<"  ";
+        number=number%100;
+        cout<<number/10<<"  ";
+        number=number%10;
+        cout<<number;
+
+return 0;
+    }
