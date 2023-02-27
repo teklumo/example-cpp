@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+#include <string>
+int main(){
+    int num,rev(0);
+    cout<<"enter the number";
+    cin>>num;
+    int n=num;
+    cout<<"the orginall no is:"<<num<<endl;
+        while(num!=0){
+        int rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+
+    cout<<"the rev is :"<<rev<<endl;
+    if(rev==n){
+        cout<<"it is  palindrome"<<endl;
+    }
+    if(rev!=n){
+        cout<<"it is not palindrome"<<endl;
+    }
+}
