@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main(){
+    char i,j;
+    for(char i='A';i<=*"Z";i++){
+        for(char j='a';j<='z';j++)
+           if(i==(j-32)){
+               cout<<i<<j<<" ";
+           }
+
+    }
+
+}
