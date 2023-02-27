@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+#include <string>
+int main(){
+   int num,rev(0),rem;
+   cout<<"enter the value";
+   cin>>num;
+   while(num!=0){
+       rem=num%10;
+       rev=rev*10+rem;
+       num=num/10;
+   }
+   while(rev!=0){
+       switch(rev%10){
+           case 0:
+               cout<<"zero";
+               break;
+           case 1:
+               cout<<"one";
+               break;
+           case 2:
+               cout<<"two";
+               break;
+           case 3:
+               cout<<"three";
+               break;
+           default:
+               break;
+       }
+       rev=rev/10;
+   }
+}
