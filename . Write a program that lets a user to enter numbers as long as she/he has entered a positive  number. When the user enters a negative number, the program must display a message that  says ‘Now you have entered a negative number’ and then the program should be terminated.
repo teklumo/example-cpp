@@ -1,0 +1,19 @@
+/* . Write a program that lets a user to enter numbers as long as she/he has entered a positive 
+number. When the user enters a negative number, the program must display a message that 
+says ‘Now you have entered a negative number’ and then the program should be terminated. */
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the number";
+    cin>>n;
+    while(n>0){
+        cout<<"enter a number";
+        cin>>n;
+    }
+    if (n<0){
+        cout<<"now u enterd the -ve number";
+    }
+}
