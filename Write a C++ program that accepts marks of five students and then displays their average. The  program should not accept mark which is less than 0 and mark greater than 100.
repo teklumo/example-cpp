@@ -1,0 +1,22 @@
+/* Write a C++ program that accepts marks of five students and then displays their average. The 
+program should not accept mark which is less than 0 and mark greater than 100. */
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    int mark[5];
+    double sum(0);
+    cout<<"enter ur mark:";
+    for(int i=0;i<5;i++){
+        cin>>mark[i];
+        if(mark[i] <0 || mark[i] >100){
+            break;
+        }
+        sum=sum+mark[i];
+    }
+    double avarage=sum/5;
+    cout<<"the avarage of numers is:"<<avarage;
+    return 0;
+}
