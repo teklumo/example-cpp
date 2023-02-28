@@ -1,0 +1,27 @@
+/* Write a program that computes and displays the square root each of the numbers
+entered from the keyboard. Once a number is entered and its square root is displayed, the 
+program should only continue repeating the same task if the user is willing to do.
+Remark:- Make an appropriate data entry validation */
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    double num=0;
+    string strd;
+    while(num>=0){
+        cout<<"enter tne num"<<endl;
+        cin>>num;
+        double sq=sqrt(num);
+        cout<<"the squire root of the num is:"<<sq<<endl;
+        cout<<"do u went more";
+         getline(cin,strd);
+    }
+    if(num<0){
+        cout<<"invalid num";
+    }
+
+
+    return 0;
+}
