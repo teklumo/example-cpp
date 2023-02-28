@@ -1,0 +1,19 @@
+/* 33. Design a progam to compute the weekly average rainfall of Addis Abaab city given that the 
+daily rainfall for four weeks.*/
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    int day[28];
+    double sum=0;
+    cout<<"enter the value";
+    for(int i=0;i<28;i++){
+        cin>>day[i];
+        sum=sum+day[i];
+    }
+    double avarage=sum/4;
+    cout<<"weekly rainfall:"<<avarage;
+    return 0;
+}
