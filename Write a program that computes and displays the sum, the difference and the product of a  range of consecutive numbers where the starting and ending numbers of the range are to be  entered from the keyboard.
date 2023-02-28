@@ -1,0 +1,28 @@
+/*  Write a program that computes and displays the sum, the difference and the product of a 
+range of consecutive numbers where the starting and ending numbers of the range are to be 
+entered from the keyboard.*/
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int start,end;
+    int pro(1),sum(0),dif(0);
+    cout<<"enter the beging end of number";
+    cin>>start>>end;
+    for(int i=start;i<=end;i++){
+        sum=sum+i;
+        pro=pro*i;
+        if(i==start){
+            dif=start;
+        }
+        else{
+            dif=dif-i;
+        }
+    }
+    cout<<"the product:"<<pro<<endl;
+    cout<<"the difference:"<<dif<<endl;
+    cout<<"the sum :"<<sum<<endl;
+
+    return 0;
+}
