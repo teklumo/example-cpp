@@ -1,0 +1,105 @@
+/* Write a C++ application that can compute the letter grade of a student after accepting the
+student’s mid and final mark. The program should only accept mid result [0-40] and final [0-
+60]. If the data entered violates this rule, the program should display that the user should 
+enter the mark in the specified range. 
+a. The program that calculates the letter grades of 20 students 
+b. The program is will expected to run until the user refuses to continue.*/
+
+
+
+
+/* a)The program that calculates the letter grades of 20 students */
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    int mid,final,total;
+    int n=1;
+    while(n<=20){
+        cout<<"enter ur mid tresult:";
+        cin>>mid;
+        if (mid <0 || mid>40 ){
+            cout<<"invalid"<<endl;
+            break;
+        }
+        cout<<"enter ur final";
+        cin>>final;
+        if(final>60 || final<0){
+            cout<<"invalid"<<endl;
+            break;
+        }
+        total=mid+final;
+        if(total>=90){
+            cout<<"ur grade is :A+"<<endl;
+        }
+        else if(total>=85){
+            cout<<"ur grade is :A"<<endl;
+        }
+        else if(total>=80){
+            cout<<"ur grade is :A-"<<endl;
+        }
+        else if(total>=75){
+            cout<<"ur grade is :B+"<<endl;
+        }
+        else if(total>=70){
+            cout<<"ur grade is :B"<<endl;
+        }
+        else if (total>65){
+            cout<<"ur grade is :B-"<<endl;
+        }
+        n++;
+    }
+
+    return 0;
+}
+
+
+
+
+/* b)The program is will expected to run until the user refuses to continue.*/
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    int mid,final,total;
+    int n=1;
+    while(n>0){
+        cout<<"enter ur mid tresult:";
+        cin>>mid;
+        if (mid <0 || mid>40 ){
+            cout<<"invalid"<<endl;
+            break;
+        }
+        cout<<"enter ur final";
+        cin>>final;
+        if(final>60 || final<0){
+            cout<<"invalid"<<endl;
+            break;
+        }
+        total=mid+final;
+        if(total>=90){
+            cout<<"ur grade is :A+"<<endl;
+        }
+        else if(total>=85){
+            cout<<"ur grade is :A"<<endl;
+        }
+        else if(total>=80){
+            cout<<"ur grade is :A-"<<endl;
+        }
+        else if(total>=75){
+            cout<<"ur grade is :B+"<<endl;
+        }
+        else if(total>=70){
+            cout<<"ur grade is :B"<<endl;
+        }
+        else if (total>65){
+            cout<<"ur grade is :B-"<<endl;
+        }
+        n++;
+    }
+
+    return 0;
+}
