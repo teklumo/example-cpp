@@ -1,0 +1,22 @@
+/* Write a program accepts list of marks of students and counts the number of students who 
+have scored marks greater than 20 in an exam out of 30. The total number of students who 
+took the test is to be entered from the keyboard.*/
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+#include<string>
+int main() {
+    int totno,eachmark[totno],above(0);
+    cout<<"enter the total num ";
+    cin>>totno;
+    cout<<"and each mark of students";
+    for(int i=0;i<totno;i++){
+        cin>>eachmark[i];
+        if(eachmark[i]>20){
+            ++ above;
+        }
+    }
+    cout<<"the num of students score more than 20 are:"<<above;
+    return 0;
+}
