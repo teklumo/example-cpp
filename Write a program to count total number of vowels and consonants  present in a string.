@@ -1,0 +1,25 @@
+/* Write a program to count total number of vowels and consonants 
+present in a string.*/
+
+#include <iostream>
+using namespace std;
+#include<string>
+int main(){
+    int consonant(0),vowel(0);
+    string line;
+    cout<<"enter the string";
+        getline(cin,line);
+    for(int i=0;i<line.length();++i){
+        if(line[i]=='a'|| line[i]=='e' || line[i]=='i' || line[i]=='o'
+        || line[i]=='u' || line[i]=='A' || line[i]=='E' || line[i]=='i'
+        || line[i]=='O' || line[i]=='U'){
+            ++vowel;
+        }
+        else if((line[i]>'a' && line[i]<='z')|| (line[i]>'A' && line[i]<='Z')){
+            ++consonant;
+        }
+    }
+    cout<<"number of consonant:"<<consonant<<endl;
+    cout<<"number of vowel:"<<vowel;
+
+}
