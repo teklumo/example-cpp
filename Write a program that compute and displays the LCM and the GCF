@@ -1,0 +1,49 @@
+/* Write a program that compute and displays the LCM and the GCF */
+
+LCM
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main (){
+    int n1,n2,max;
+    cout<<"enter the numbers";  // the key point  is finding the maximum number from the inputs 
+    cin>>n1>>n2;
+    max=(n1>n2)?n1:n2;
+    while(true){
+        if(max%n1==0 && max%n2==0){
+            cout<<"LCM="<<max;
+            break;
+        }
+        else{
+            max++;
+        }
+    }
+
+ return 0;
+}
+
+GCF
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main (){
+    int n1,n2,hcf;
+    cout<<"enter the numbers";  //the key thing here is finding the smallest number from the inputs   
+    cin>>n1>>n2;
+    if(n2>n1){
+        int temp=n2;
+        n2=n1;
+        n1=temp;
+    }
+    for(int i=1;i<=n2;i++){
+        if(n1%i==0 && n2%i==0){
+            hcf=i;
+        }
+    }
+
+    cout<<"HCF:"<<hcf;
+
+ return 0;
+}
