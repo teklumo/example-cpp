@@ -1,0 +1,25 @@
+/* Accepts a number and check whether a number is prime or not */
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main (){
+    int num,result;
+    cout<<"enter the number";
+    cin>>num;
+    bool prime=true;
+    if (num==0 || num==1){
+        prime=false;
+    }
+    for(int i=2;i<num;i++){
+        if(num%i==0){
+            prime=false;
+        }
+    }
+    if(prime){
+        cout<<num<<" is prime";
+    }
+    else{
+        cout<<num<<" is not prime";
+    }
+}
