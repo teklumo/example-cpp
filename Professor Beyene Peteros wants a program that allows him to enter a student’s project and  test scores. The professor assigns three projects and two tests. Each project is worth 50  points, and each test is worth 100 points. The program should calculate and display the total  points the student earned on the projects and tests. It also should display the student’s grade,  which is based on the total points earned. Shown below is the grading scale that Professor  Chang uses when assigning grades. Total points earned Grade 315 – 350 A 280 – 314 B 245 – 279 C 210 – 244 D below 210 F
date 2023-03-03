@@ -1,0 +1,52 @@
+/*   Professor Beyene Peteros wants a program that allows him to enter a student’s project and 
+test scores. The professor assigns three projects and two tests. Each project is worth 50 
+points, and each test is worth 100 points. The program should calculate and display the total 
+points the student earned on the projects and tests. It also should display the student’s grade, 
+which is based on the total points earned. Shown below is the grading scale that Professor 
+Chang uses when assigning grades.
+Total points earned Grade
+315 – 350 A
+280 – 314 B
+245 – 279 C
+210 – 244 D
+below 210 F */
+
+
+#include<iostream>
+using namespace std;
+int main (){
+	double pro1,pro2,pro3,test1,test2,total,total_pro,total_test;
+	cout<<"enter the first project result 50%:"<<endl;
+	cin>>pro1;
+	cout<<"enter the second project result 50%:"<<endl;
+	cin>>pro2;
+	cout<<"enter the result of the thired project result 50%:"<<endl;
+	cin>>pro3;
+	cout<<"enter the result of test one 100%:"<<endl;
+	cin>>test1;
+	cout<<"enter the reuslt of test two 100%:"<<endl;
+	   cin>>test2;
+	   total_pro=(pro1+pro2+pro3);
+	   total_test=(test1+test2);
+	   total=total_pro + total_test;
+	   cout<<"total project result:"<<total_pro<<endl;
+	   cout<<"total test result:"<<total_test<<endl;
+	   if(total>=315 && total<=350){
+		   cout<<"Gread A";
+	   }
+	   else if(total>=280){
+		   cout<<"Gread B";
+	   }
+	   else if(total>=245){
+		   cout<<"Gread C";
+	   }
+	   else if(total>=210){
+		   cout<<"Gread D";
+	   }
+	   else{
+		   cout<<"Grade F";
+	   }
+	   	 
+	return 0;
+	
+}
