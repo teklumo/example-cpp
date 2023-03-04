@@ -19,17 +19,4 @@ int main(){
 
 
 
-#include <iostream>
-using namespace std;
-#include <string>
-int main(){
-    int balance[4][6];
-	for(int i=0;i<4;i++){
-		for(int j=0;j<6;j++){
-			balance[i][j]=i+j;
-			cout<<balance[i][j]<<" ";
-		}
-		cout<<endl;
-	}
-	return 0;
-}
+
