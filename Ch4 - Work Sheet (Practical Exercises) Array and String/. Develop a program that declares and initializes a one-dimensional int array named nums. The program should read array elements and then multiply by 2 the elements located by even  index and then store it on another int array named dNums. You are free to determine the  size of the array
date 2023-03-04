@@ -1,0 +1,30 @@
+/* . Develop a program that declares and initializes a one-dimensional int array named nums.
+The program should read array elements and then multiply by 2 the elements located by even 
+index and then store it on another int array named dNums. You are free to determine the 
+size of the array */
+
+#include <iostream>
+using namespace std;
+#include <string>
+int main(){
+    int num[5],dnum[5];
+	cout<<"enter the numbers";
+	for(int i=1;i<=5;i++){
+		cin>>num[i];
+		if((i!=0) && (i%2==0)){
+			dnum[i]=num[i]*2;
+		}
+		else{
+			dnum[i]=num[i];
+		}
+	}
+	cout<<"\nthe input nums are:";
+	for(int i=0;i<=5;i++){
+		cout<<num[i]<<" ";
+	}
+	cout<<"\n the dnujm arry elements";
+	for(int i=0;i<=5;i++){
+		cout<<dnum[i]<<" ";
+	}
+	return 0;
+}
