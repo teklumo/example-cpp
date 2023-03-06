@@ -1,0 +1,26 @@
+/* 7. Write a C++ program that finds and displays the maximum value and its position within a 
+two-dimensional array of integers. The array should be declared as a 4-by-5 array of integers 
+and initialized with the data given below.
+16, 22, 99, 4, 18, -258, 4, 101, 5, 98, 105, 6, 15, 2, 45, 33, 88, 72, 16, and 3 */
+
+#include <iostream>
+using namespace std;
+#include <string>
+int main(){
+	int arr[4][5]={16,22,99,4,18,-258,4,101,5,98,105,6,15,2,45,33,88,72,16,3};
+	int maxval=arr[0][0];
+	int row=0;
+	int colo=0;
+	for(int i=0;i<4;i++){
+		for(int j=0;j<5;j++){
+			if(arr[i][j]>maxval){
+				maxval=arr[i][j];
+				row=i;
+				colo=j;
+			}
+		}
+	}
+	cout<<"the largest element is:"<<maxval<<endl;
+	cout<<"it is found at:arr["<<row<<"]"<<"["<<colo<<"]";
+return 0;
+}
