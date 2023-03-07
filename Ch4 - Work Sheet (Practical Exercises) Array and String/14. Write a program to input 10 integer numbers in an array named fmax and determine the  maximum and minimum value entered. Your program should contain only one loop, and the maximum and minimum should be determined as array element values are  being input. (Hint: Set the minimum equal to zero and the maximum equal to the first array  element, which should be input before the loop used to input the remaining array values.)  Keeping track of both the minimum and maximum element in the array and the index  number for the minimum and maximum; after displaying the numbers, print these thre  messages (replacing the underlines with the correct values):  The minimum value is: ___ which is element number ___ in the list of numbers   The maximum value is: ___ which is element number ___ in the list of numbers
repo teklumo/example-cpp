@@ -1,0 +1,38 @@
+/* 14. Write a program to input 10 integer numbers in an array named fmax and determine the 
+maximum and minimum value entered. Your program should contain only one
+loop, and the maximum and minimum should be determined as array element values are 
+being input. (Hint: Set the minimum equal to zero and the maximum equal to the first array 
+element, which should be input before the loop used to input the remaining array values.) 
+Keeping track of both the minimum and maximum element in the array and the index 
+number for the minimum and maximum; after displaying the numbers, print these thre 
+messages (replacing the underlines with the correct values):
+ The minimum value is: ___ which is element number ___ in the list of numbers 
+ The maximum value is: ___ which is element number ___ in the list of numbers */
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int fmax[4],i;
+    int maxval,minval;
+    cout<<"enter the numbers:";
+    for( i=0;i<4;i++){
+        cin>>fmax[i];
+        maxval=fmax[0];
+        minval=fmax[0];
+        if(fmax[i]>maxval){
+            maxval=fmax[i];
+        }
+        if(fmax[i]<minval){
+            minval=fmax[i];
+        
+        }
+    }
+       cout<<"The maximum value is: "<<maxval<<" which is element number:"<<i+1<<endl;
+       cout<<"The minimum value is: "<<minval<<" which is element number:"<<i+1<<endl;
+    
+  return 0;    
+
+}
