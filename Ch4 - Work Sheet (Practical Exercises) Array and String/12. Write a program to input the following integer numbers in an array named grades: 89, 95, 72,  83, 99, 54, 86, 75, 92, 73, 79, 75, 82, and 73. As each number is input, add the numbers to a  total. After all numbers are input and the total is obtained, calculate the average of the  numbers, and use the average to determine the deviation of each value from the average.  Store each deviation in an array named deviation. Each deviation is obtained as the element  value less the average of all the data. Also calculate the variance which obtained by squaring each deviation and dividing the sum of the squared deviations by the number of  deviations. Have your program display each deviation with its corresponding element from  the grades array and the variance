@@ -25,9 +25,9 @@ for(int i=0;i<14;i++){
 avarage=sum/14;
 for(int i=0;i<14;i++){
     devation[i]=grades[i]-avarage;
-     variance=pow(devation[i],2)+variance;
+     variance=pow(devation[i],2)+variance;       //variance in this cause is just to sum up the values in te numnetor
 }
-variance=variance/14;
+variance=variance/14;                         //in this case the variance is updated to its orginal value
 double standard_devasion=sqrt(variance);
 cout<<"variance="<<variance<<endl;
 cout<<"standard_devation="<<standard_devasion<<endl;
