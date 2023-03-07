@@ -1,0 +1,37 @@
+/* 12. Write a program to input the following integer numbers in an array named grades: 89, 95, 72, 
+83, 99, 54, 86, 75, 92, 73, 79, 75, 82, and 73. As each number is input, add the numbers to a 
+total. After all numbers are input and the total is obtained, calculate the average of the 
+numbers, and use the average to determine the deviation of each value from the average. 
+Store each deviation in an array named deviation. Each deviation is obtained as the element 
+value less the average of all the data. Also calculate the variance which obtained by
+squaring each deviation and dividing the sum of the squared deviations by the number of 
+deviations. Have your program display each deviation with its corresponding element from 
+the grades array and the variance */
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main(){
+      int grades[14]={89, 95, 72, 
+83, 99, 54, 86, 75, 92, 73, 79, 75, 82,73};
+int sum(0);
+int devation[14];
+double variance(0);
+double avarage;
+for(int i=0;i<14;i++){
+    sum=sum+grades[i];
+}
+avarage=sum/14;
+for(int i=0;i<14;i++){
+    devation[i]=grades[i]-avarage;
+     variance=pow(devation[i],2)+variance;
+}
+variance=variance/14;
+double standard_devasion=sqrt(variance);
+cout<<"variance="<<variance<<endl;
+cout<<"standard_devation="<<standard_devasion<<endl;
+
+  return 0;    
+
+}
