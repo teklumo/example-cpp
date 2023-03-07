@@ -15,10 +15,10 @@ messages (replacing the underlines with the correct values):
 using namespace std;
 int main()
 {
-    int fmax[4],i;
+    int fmax[10],i;
     int maxval,minval;
     cout<<"enter the numbers:";
-    for( i=0;i<4;i++){
+    for( i=0;i<10;i++){
         cin>>fmax[i];
         maxval=fmax[0];
         minval=fmax[0];
