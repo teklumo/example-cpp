@@ -1,0 +1,48 @@
+/* 17. Write a C++ program that read a two dimensional array, find and display:
+ The row sum and column sum of a matrix.
+ Left diagonal sum
+ Right diagonal sum*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int row,col;
+    cout<<" enter number of colomen:";
+    cin>>col;
+    cout<<"enter number of row:";
+    cin>>row;
+    int arr[row][col];
+    cout<<"enter the elements of the matrix"<<endl;
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            cin>>arr[i][j];
+        }
+    }
+    cout<<"the input matrix is:"<<endl;
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    int row_sum(0),colomen_sum(0),left_diagonal(0),right_diagonal(0);
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+             row_sum+=arr[i][j];
+             colomen_sum+=arr[j][i];
+             if(i==j){
+                right_diagonal+=arr[i][j];
+             }
+        }
+        cout<<"the sum of row "<<i+1<<" :"<<row_sum<<endl;
+             cout<<"the sum of colomen "<<i+1<<" :"<<colomen_sum<<endl;
+             row_sum=0;
+             colomen_sum=0;
+    }
+    left_diagonal=right_diagonal;
+    cout<<"the sum of right diagonal :"<<right_diagonal<<endl;
+    cout<<"the sum of left diagonal:"<<left_diagonal<<endl;
+    return 0;
+}
