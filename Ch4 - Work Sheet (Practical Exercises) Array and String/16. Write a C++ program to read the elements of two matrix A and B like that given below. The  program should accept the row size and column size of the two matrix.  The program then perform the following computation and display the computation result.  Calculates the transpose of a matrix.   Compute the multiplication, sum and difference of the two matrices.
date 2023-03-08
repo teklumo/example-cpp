@@ -1,0 +1,73 @@
+/* 16. Write a C++ program to read the elements of two matrix A and B like that given below. The 
+program should accept the row size and column size of the two matrix. 
+The program then perform the following computation and display the computation result.
+ Calculates the transpose of a matrix. 
+ Compute the multiplication, sum and difference of the two matrices. */
+
+#include<iostream>
+using namespace std;
+int main(){
+   int row,colomen;
+   cout<<"enter number of row:";
+   cin>>row;
+   cout<<"enter number of colomen:";
+   cin>>colomen;
+   int matrix1[row][colomen],matrix2[row][colomen];
+   cout<<"enter elements of matrix 1:"<<endl;
+   for(int i=0;i<row;i++){
+    for(int j=0;j<colomen;j++){
+        cin>>matrix1[i][j];
+    }
+   }
+   cout<<"enter elements of matrix 2:"<<endl;
+   for(int i=0;i<row;i++){
+    for(int j=0;j<colomen;j++){
+        cin>>matrix2[i][j];
+    }
+   }
+   cout<<"elemets of matrix 1:"<<endl;
+   for(int i=0;i<row;i++){
+    for(int j=0;j<colomen;j++){
+        cout<<matrix1[i][j]<<" ";
+    }
+    cout<<endl;
+   }
+   cout<<"the transponse of matrix 1:"<<endl;
+   for(int i=0;i<colomen;i++){
+    for(int j=0;j<row;j++){
+        cout<<matrix1[j][i]<<" ";
+    }
+    cout<<endl;
+   }
+   cout<<"the sum of two matrices is:"<<endl;
+   for(int i=0;i<row;i++){
+    for(int j=0;j<colomen;j++){
+        cout<<matrix1[i][j] + matrix2[i][j]<<" ";
+    }
+    cout<<endl;
+   }
+   cout<<"the difference of the two matrices:"<<endl;
+   for(int  i=0;i<row;i++){
+    for(int j=0;j<colomen;j++){
+        cout<<matrix1[i][j] - matrix2[i][j]<<" ";
+    }
+    cout<<endl;
+   }
+   cout<<"the multiplication of the two matrices:"<<endl;
+    int C[row][colomen];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < colomen; j++)
+        {
+            C[i][j] = 0;
+            for (int k = 0; k < colomen; k++)
+            {
+                C[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
