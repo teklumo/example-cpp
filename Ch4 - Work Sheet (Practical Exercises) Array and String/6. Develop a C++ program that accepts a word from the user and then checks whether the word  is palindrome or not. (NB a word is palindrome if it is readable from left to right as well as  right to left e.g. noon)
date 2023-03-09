@@ -1,0 +1,31 @@
+/* 6. Develop a C++ program that accepts a word from the user and then checks whether the word 
+is palindrome or not. (NB a word is palindrome if it is readable from left to right as well as 
+right to left e.g. noon) */
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string word;
+    cout << "Enter a word: ";
+    cin >> word;
+    bool pri=true;
+    int  length=word.length();
+    for(int i=0,j=length-1;i<length;i++,j--){
+        if(word[i]!=word[j]){
+            pri=false;
+            break;
+        }
+    }
+    if(pri){
+        cout<<word<<" is palindrome.";
+    }
+    else{
+        cout<<word<<" is not palindrome.";
+    }
+    return 0;
+}
