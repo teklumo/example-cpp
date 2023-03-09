@@ -1,0 +1,22 @@
+/* 1. Develop a C++ program that accepts the name of a person and then counts how many
+vowels the person’s name have. */
+
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+{   string name;
+    int vowel(0);
+    cout<<"enter ur name:";
+    getline(cin,name);
+    for(int  i=0;i<name.length();i++){
+        if(name[i]=='a'||name[i]=='A'||name[i]=='E'||name[i]=='I'||name[i]=='O'||name[i]=='U' || name[i]=='e'|| name[i]=='i'||name[i]=='o'||name[i]=='u'){
+            vowel++;
+        }
+    }
+    cout<<"the number of vowels in ur name are:"<<vowel;
+    return 0;
+}
+ 
