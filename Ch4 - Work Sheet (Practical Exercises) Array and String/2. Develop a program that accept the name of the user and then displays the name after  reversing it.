@@ -1,0 +1,18 @@
+/* 2. Develop a program that accept the name of the user and then displays the name after 
+reversing it. */
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+{   string name,rev;
+    cout<<"enter ur name:";
+    getline(cin,name);
+    for(int i=name.length();i>=0;i--){
+       rev=rev+name[i];
+    }
+    cout<<"ur reverse name is :"<<rev;
+    return 0;
+}
+ 
