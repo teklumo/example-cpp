@@ -1,0 +1,21 @@
+/*  10. Write a program that asks users for five movie titles. Print the longest title.*/
+
+#include <iostream> 
+#include <string>  // strcmp() prototype
+using namespace std;
+
+int main() 
+{ 
+    string title[5];
+    string maxval=title[0];
+    cout<<"enter the movie titles:";
+    for(int i=0;i<5;i++){
+        getline(cin,title[i]);
+        if(title[i].length()> maxval.length()){
+            maxval=title[i];
+        }
+
+    }
+    cout<<"the longest title you enterd:"<<maxval;
+}
+    
