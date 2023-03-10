@@ -1,0 +1,36 @@
+/* 8. Write a program that stores a user name and password in a character array called user and 
+pass respectively. Ask users for the user name and password. Use strcmp() to inform users 
+whether they typed the proper user name and password. Allow the user to reenter if he/she 
+put wrong user name and/or password. */
+
+#include <iostream> 
+#include <cstring>  // strcmp() prototype
+using namespace std;
+
+int main() 
+{ 
+    char user[20];
+    char pass[20];
+    cout<<"enter your username:";
+    cin.getline(user,20);
+    cout<<"enter your password:";
+    cin.getline(pass,20);
+    if(strcmp(user,"teklu")==0 && strcmp(pass,"tsegea")==0){
+        cout<<"you have logged in!";
+    }
+    else{
+        while(strcmp(user,"teklu")!=0 || strcmp(pass,"tsegea")!=0){
+            cout<<"incorrect username or password!"<<endl;
+            cout<<"enter your username:";
+            cin.getline(user,20);
+            cout<<"enter your password:";
+            cin.getline(pass,20);
+            if(strcmp(user,"teklu")==0 && strcmp(pass,"tsegea")==0){
+            cout<<"you have logged in!";
+             break;
+            }
+            
+        }
+    }
+}
+    
