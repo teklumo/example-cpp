@@ -1,0 +1,45 @@
+/* 12. Write a program that read names and marks of students’ and then give the grades according 
+to their mark score.
+*/
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+{    int mark[5];
+    string name[5];
+    string grade[5];
+    for(int i=0;i<5;i++){
+        cout<<"enter the name of students"<<i+1<<":";
+        getline(cin,name[i]);
+    }
+    for(int i=0;i<5;i++){
+        cout<<"enter the mark of students"<<i+1<<":";
+        cin>>mark[i];
+        if(mark[i]>85){
+                grade[i]="A+";
+        }
+        else if(mark[i]>75){
+            grade[i]='B';
+        }
+        else if(mark[i]>65){
+            grade[i]='C';
+        }
+        else if(mark[i]>45){
+            grade[i]='D';
+        }
+        else {
+            grade[i]='F';
+        }
+    }
+    for(int i=0;i<5;i++){
+        cout<<name[i]<<" "<<grade[i]<<endl;
+    }
+    
+   
+    return 0;
+}
+ 
+
+
