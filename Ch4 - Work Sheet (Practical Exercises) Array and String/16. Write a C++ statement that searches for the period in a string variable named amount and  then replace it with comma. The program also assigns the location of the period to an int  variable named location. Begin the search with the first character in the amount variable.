@@ -1,0 +1,21 @@
+/*
+16. Write a C++ statement that searches for the period in a string variable named amount and 
+then replace it with comma. The program also assigns the location of the period to an int 
+variable named location. Begin the search with the first character in the amount variable.*/
+
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+int main() 
+{ 
+   string amount;
+   cout<<"enter the string:";
+   getline(cin,amount);
+   char location=amount.find('.');
+   amount.replace(location,1,",");
+   cout<<amount;
+return 0;     
+       
+       
+        }                
