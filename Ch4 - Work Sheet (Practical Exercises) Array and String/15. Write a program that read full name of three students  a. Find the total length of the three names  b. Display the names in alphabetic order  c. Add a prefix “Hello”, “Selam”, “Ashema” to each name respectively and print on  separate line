@@ -1,0 +1,53 @@
+/*  15. Write a program that read full name of three students 
+a. Find the total length of the three names 
+b. Display the names in alphabetic order 
+c. Add a prefix “Hello”, “Selam”, “Ashema” to each name respectively and print on 
+separate line 
+*/
+
+
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+int main() 
+{ 
+   string name1,name2,name3;
+   cout<<"enter name of first student:";
+   getline(cin ,name1);
+   cout<<"entar name of second student:";
+   getline(cin,name2);
+   cout<<"enter name of thired student:";
+   getline(cin,name3);
+   int length1=name1.length();
+   int length2=name2.length();
+   int length3=name3.length();
+   cout<<"length of first:"<<length1<<'\n'<<"length of second:"<<length2<<'\n'<<"length of third:"<<length3<<endl;     //a. Find the total length of the three names
+    string order[3]={name1,name2,name3};
+    cout<<" the input order:"<<endl;
+    for(int i=0;i<3;i++){
+        cout<<order[i]<<endl;
+    }
+    
+    for(int i=0;i<3;i++){
+        for(int j=i+1;j<3;j++){
+            if(order[i]>order[j]){
+                string temp=order[i];
+                order[i]=order[j];
+                order[j]=temp;
+            }
+        }
+    }
+    cout<<"after sorting in alphatic order:"<<endl;      //b. Display the names in alphabetic order 
+    for(int i=0;i<3;i++){
+        cout<<order[i]<<endl;
+    }
+    cout<<"for greating:"<<endl;
+    for(int i=0;i<3;i++){
+        cout<<"Selam "<<order[i]<<endl;       //c. Add a prefix “Hello”, “Selam”, “Ashema” to each name respectively and print on separate line 
+    }
+   
+return 0;     
+       
+       
+        }                
