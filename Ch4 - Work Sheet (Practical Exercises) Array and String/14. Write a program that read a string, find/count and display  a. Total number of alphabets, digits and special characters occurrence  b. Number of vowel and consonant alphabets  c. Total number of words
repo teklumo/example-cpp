@@ -1,0 +1,105 @@
+/*
+14. Write a program that read a string, find/count and display 
+a. Total number of alphabets, digits and special characters occurrence 
+b. Number of vowel and consonant alphabets 
+c. Total number of words */
+  
+  
+  // a. Total number of alphabets, digits and special characters occurrence 
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+int main() 
+{ 
+    string str1;
+    int alp(0),dig(0),spe(0);
+    cout<<"enter string :";
+    getline(cin,str1);
+    int length=str1.length();
+    for(int i=length;i>=0;i--){
+        if(str1[i]>=48 && str1[i]<=57){
+            dig++;
+        }
+        else if((str1[i]>=65 && str1[i]<=90)|| (str1[i]>=97 && str1[i]<=122)){
+            alp++;
+        }
+        else{
+            if(str1[i]!='\0'){
+                    spe++;
+            }
+            
+        }
+    }
+    cout<<"alphabets :"<<alp<<'\n'<<"digits characters:"<<dig<<'\n'<<" special characters:"<<spe;
+    
+    
+return 0;     
+       
+       
+        }         //Exit point!              
+        
+        
+        //b. Number of vowel and consonant alphabets 
+        
+        
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+int main() 
+{ 
+    string str;
+    int vowel(0),con(0);
+    cout<<"enter string :";
+    getline(cin,str);
+    int length=str.length();
+    for(int i=length;i>=0;i--){
+        if(str[i]=='A'||str[i]=='a'||str[i]=='E'||str[i]=='e'||str[i]=='I'||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u'){
+            vowel++;
+        }
+        else if((str[i]>=65 && str[i]<=90)|| (str[i]>=97 && str[i]<=122)) {
+            con++;
+
+        }
+        
+
+    }
+    cout<<"vowel:"<<vowel<<endl;
+    cout<<"consonant:"<<con<<endl;
+return 0;     
+       
+       
+        }         
+        
+        
+        //c. Total number of words
+        
+        
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+int main() 
+{ 
+    string str;
+    int word(0);
+    cout<<"enter string :";
+    getline(cin,str);
+    int length=str.length();
+    for(int i=length;i>=0;i--){
+        if((str[i]>=65 && str[i]<=90)|| (str[i]>=97 && str[i]<=122)){
+           word++;
+        }
+    }
+    cout<<"numer of words:"<<word<<endl;
+    
+return 0;     
+       
+       
+        }                
+        
+        
+        
+        
+        
