@@ -1,0 +1,82 @@
+/* 35. A prime number is an integer greater than one and divisible only by itself and one. The first 
+seven prime numbers are 2, 3, 5, 7, 11, 13, and 17. Write a program that
+a. Accepts a number and check whether a number is prime or not
+b. Displays all the prime numbers between 1 and 100.
+c. Compute sum of all prime numbers between 1 to n.
+d. Find all prime factors of a number.
+*/
+ 
+ 
+ //  a. Accepts a number and check whether a number is prime or not
+ 
+ #include <iostream>
+#include<cmath>
+using namespace std; 
+  
+int main() 
+{
+  int num;
+  cout<<"enter the num:";
+  cin>>num;
+  bool prime=true;
+  for(int i=2;i<=sqrt(num);i++){        // u can also use 'num/2' in place of  'sqrt(num)'
+      if(num%i==0){
+        prime=false;
+      }
+  }
+  if(prime){
+    cout<<num<<" is prime.";
+  }
+  else{
+    cout<<num<<" is not prime.";
+  }
+}
+
+
+ 
+ #include <iostream>   // b. Displays all the prime numbers between 1 and 100.
+using namespace std; 
+  
+int main() 
+{
+  for(int i=2;i<=100;i++){
+    bool prime=true;
+    for(int j=2;j<=i/2;j++){
+      if(i%j==0){
+        prime=false;
+        break;
+      }
+    }
+    if(prime){
+      cout<<i<<" ";
+    }
+  } 
+}
+
+
+
+
+                        // c. Compute sum of all prime numbers between 1 to n.
+#include <iostream>
+#include<cmath>
+using namespace std; 
+  
+int main() 
+{
+  int num,sum(0);
+  cout<<"enter num:";
+  cin>>num;
+  for(int i=2;i<=num;i++){
+    bool prime=true;
+    for(int j=2;j<=i/2;j++){
+      if(i%j==0){
+        prime=false;
+        break;
+      }
+    }
+    if(prime){
+        sum=sum+i;
+      }
+  }
+  cout<<"sum="<<sum;
+}
