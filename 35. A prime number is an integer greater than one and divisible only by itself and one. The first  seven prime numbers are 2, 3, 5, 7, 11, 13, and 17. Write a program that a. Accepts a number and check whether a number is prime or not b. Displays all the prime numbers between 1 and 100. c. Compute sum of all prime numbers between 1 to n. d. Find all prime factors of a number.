@@ -80,3 +80,31 @@ int main()
   }
   cout<<"sum="<<sum;
 }
+
+
+
+#include <iostream>    //d. Find all prime factors of a number.
+#include<cmath>
+using namespace std; 
+  
+int main() 
+{
+  int num;
+  cout<<"enter num:";
+  cin>>num;
+  
+  for(int i=2;i<=num;i++){
+    bool prime=true;
+    for(int j=2;j<=i/2;j++){
+          if(i%j==0){
+            prime=false;
+            break;
+          }
+    }
+    if(prime){
+       if(num%i==0){
+        cout<<i<<" ";
+       }
+    }
+  }
+}
