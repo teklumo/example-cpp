@@ -1,0 +1,67 @@
+/* 17. Write a program that accepts a positive integer and print it in words.*/
+
+#include <iostream>
+#include<cmath>
+using namespace std; 
+  
+int main() 
+{
+ int num,n;
+ cout<<"entr num:";
+ cin>>num;
+ if(num>=0 && num<=9){
+  switch(num){
+    case 0:
+      cout<<"zero ";
+      break;
+    case 1:
+      cout<<"one ";
+      break;
+    case 2:
+      cout<<"two ";
+      break;
+    case 3:
+      cout<<"three";
+      break;
+    case 4:
+      cout<<"four";
+      break;
+    default:
+      cout<<"default";
+      break;
+  }
+ }
+ else{
+    while(num!=0){
+      n=log10(num);
+      int g=num/pow(10,n);
+      switch(g){
+        case 0:
+      cout<<"zero ";
+      break;
+    case 1:
+      cout<<"one ";
+      break;
+    case 2:
+      cout<<"two ";
+      break;
+    case 3:
+      cout<<"three ";
+      break;
+    case 4:
+      cout<<"four ";
+      break;
+    default:
+      cout<<"default ";
+      break;
+  }
+  num=num-(g*pow(10,n));
+      }
+    }
+
+ }
+
+ 
+  
+  
+ 
